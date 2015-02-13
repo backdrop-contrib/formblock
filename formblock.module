@@ -17,7 +17,7 @@ function formblock_form_alter(&$form, &$form_state, $form_id) {
         'class' => array('formblock-node-type-settings-form'),
       ),
       '#attached' => array(
-        'js' => array(backdrop_get_path('module', 'formblock') . '/formblock.js'),
+        'js' => array(backdrop_get_path('module', 'formblock') . '/js/formblock.js'),
       ),
     );
     $form['formblock']['formblock_expose'] = array(
@@ -113,7 +113,7 @@ function formblock_block_info() {
  */
 function formblock_block_view($delta = '', $settings = array(), $contexts = array()) {
   $block = array();
-  $block['content']['#attached']['css'][] = backdrop_get_path('module', 'formblock') . '/formblock.css';
+  $block['content']['#attached']['css'][] = backdrop_get_path('module', 'formblock') . '/css/formblock.css';
   switch ($delta) {
     case 'user_register':
       global $user;
@@ -175,7 +175,7 @@ function formblock_get_block($type) {
     }
 
     // Add our CSS
-    $block['content']['#attached']['css'][] = backdrop_get_path('module', 'formblock') . '/formblock.css';
+    $block['content']['#attached']['css'][] = backdrop_get_path('module', 'formblock') . '/css/formblock.css';
 
     $block['subject'] = t('@type form', array('@type' => $node_type->name));
     $block['content']['form'] = $form;
