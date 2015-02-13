@@ -19,7 +19,7 @@ Installation
 - Check the box "[] Enable data entry from a block". This will 'make the entry
 form for this content type available as a block.'
 
-  - Choose whether you want to '[] Show submission guidelines'.
+- Choose whether you want to '[] Show submission guidelines'.
 
 - Save the settings by clicking the 'Save content type' button.
 
