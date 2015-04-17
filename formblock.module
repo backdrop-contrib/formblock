@@ -83,26 +83,26 @@ function formblock_block_info() {
       $blocks[$name] = array(
         'info' => t('@name form block', array('@name' => $type->name)),
         'description' => t('Form that allows new @name content to be created.', array('@name' => $type->name)),
-        'cache' => DRUPAL_NO_CACHE,
+        'cache' => BACKDROP_NO_CACHE,
       );
     }
   }
   $blocks['user_register'] = array(
     'info' => t('User registration form'),
     'description' => t('Form that allows new accounts to be created.'),
-    'cache' => DRUPAL_NO_CACHE,
+    'cache' => BACKDROP_NO_CACHE,
   );
   if (module_exists('contact')) {
     $blocks['contact_site'] = array(
       'info' => t('Site-wide contact form'),
       'description' => t('Form that will allow you to contact the site owners.'),
-      'cache' => DRUPAL_NO_CACHE,
+      'cache' => BACKDROP_NO_CACHE,
     );
   }
   $blocks['user_password_request'] = array(
     'info' => t('Request new password form'),
     'description' => t('Form that will email you a one-time log in link.'),
-    'cache' => DRUPAL_NO_CACHE,
+    'cache' => BACKDROP_NO_CACHE,
   );
 
   return $blocks;
