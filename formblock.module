@@ -165,6 +165,11 @@ function formblock_get_block($type) {
     $title = backdrop_get_title();
     $form = node_add($type);
 
+    // Hide the cancel link.
+    if (isset($form['actions']['cancel'])) {
+      $form['actions']['cancel']['#access'] = FALSE;
+    }
+
     // Restore title, which will have been overridden.
     backdrop_set_title($title, PASS_THROUGH);
 
