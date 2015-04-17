@@ -1,3 +1,4 @@
 name = Form block
 description = Enables the presentation of user registration, site wide contact, or node creation forms in blocks.
+type = module
 backdrop = 1.x
